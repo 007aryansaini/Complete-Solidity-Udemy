@@ -1,0 +1,47 @@
+/*
+
+--> Variables : 
+         
+            . They are nothing but the reserve memory locations to store values.
+            . This means when you are creating a variable you are reserving some space in the memory.
+            . Formal Defination - Variables are used to stopre information to be referenced and manipulated in a computer program.
+            
+            
+            
+-->    Solidity supports three types of variables.
+
+               . State Variables − Variables whose values are permanently stored in a contract storage.
+
+               . Local Variables − Variables whose values are present till function is executing.
+
+               . Global Variables − Special variables exists in the global namespace used to get information about the blockchain.
+
+--> The three main types of Variables in Solidity are -
+
+            . Boolean - keyword : bool - Value: true/false
+            . Integer - keyword : uint - value - signed and unsigned integer of varying sizes
+            . String  - keyword : string - value - data values that ar made up of ordered sequence of characters.
+ 
+
+
+*/
+
+
+// Simple code to understand basic syntax how to declare a variable.
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+
+contract learnVariable{
+
+ uint public wallet = 500;
+ string public name = "Aryan";
+ // or 
+ string public surname = 'Saini';
+ address public owner = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
+ bool public status = true;
+
+}
+
+
