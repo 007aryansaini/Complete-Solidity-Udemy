@@ -1,0 +1,17 @@
+--> Smart contract are digital contract stored on a blockchain that are automatically executed when predetermined terms and conditions are met.
+
+--> Solidity 
+           . Solidity is contract-oriented , high level language for implementing smart contract.
+           . Solidty is a Language that is used to develop smart contract.
+           . It is designed to target the Ethereum Virtual Machine(EVM).
+           . Solidity is a curly-bracket language.
+           . It is object oriented too.
+
+--> Pragma in Solidity 
+
+           . It is generally the first line of code within an Solidity File.
+           . It is a directive that specifies the compiler version to be used for the current Solidity file.
+           . Syntax - pragma slidity >= 0.7.0 < 0.9.0;   -- This is for a range of compilers this means that it supports compiler version greater than equal to 0.7.0 and less than 0.9.0
+                      we can also specify one particular version syntax pragma solidity 0.8.0;
+
+           
