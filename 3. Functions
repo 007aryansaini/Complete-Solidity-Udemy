@@ -1,0 +1,33 @@
+/*
+
+--> Function 
+
+      . A function is a piece of code that can be used again and again without  rewriting the the whole code again we just only have to write the function name.
+      . It is basically used for code reusablility.
+      . It allows a programmer to divide a big problem into smaller and meaningfun problem.
+      . Main purpose of function is to reduce redundancy and increase efficiency.
+     
+
+--> Syntax to write a function
+
+     . function function-name( parameter list ) scope returns() {
+
+         -----------
+         -----------   statements / code is a function is written in  curly brackett.
+
+      }
+
+
+*/
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+
+contract learnFunction{
+
+
+    function addTwoIntegers(uint _x , uint _y) public pure returns(uint){
+            return _x + _y;
+    } 
+}
