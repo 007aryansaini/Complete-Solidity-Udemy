@@ -1,0 +1,35 @@
+/*
+
+Scope - Functions and Vraiables 
+
+   . All the variables that we write in a function are localized in the function only. This is the local scope of these variables.
+   . if we declare any state variable then we can acces this state variable anywhere in the same contract.
+ 
+
+*/  
+
+
+
+// simple code to understand scope - variables and functions
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+
+contract scope{
+
+      // If we always know that the value of  a will always be 10 then it's a smart practise to initialize a only once in a state variable
+      uint a = 10;
+
+
+    function addTwoValues() public view returns(uint){
+          //   uint a = 1;    // The scope of b is within the function.
+             uint b = 2;  // The scope of b is within the function.
+             return (a + b);
+    }
+     function addTwoNewValues() public view returns(uint){
+          //   uint a = 3;     // The scope of b is within the function.
+             uint b = 2;    // The scope of b is within the function.
+             return (a + b);
+    }
+}
