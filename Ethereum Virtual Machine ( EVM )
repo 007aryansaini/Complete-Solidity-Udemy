@@ -1,0 +1,32 @@
+--> The Ethereum Virtual Machine -
+
+      a.) Overview -
+          
+           . The EVM is the runtime evvironment for smart contracts in ethereum.
+           . It is completely isolated which means that the code running inside EVM has no access to network , filesystem or other processes.
+           . Smart contract have limited access to to other smart contracts.
+
+      b.) Accounts -
+  
+           . There are two kinds of account in Ethereum whic shares the same address space.
+           . External accounts - These are controlled by public - private key pairs( i.e. humans)
+           . Contract accounts - These are controlled by the code stored together with the account.
+
+        #note - the address of an external account is determined from the public key while the address of the contract
+                is determained by at the time the contract is created ( it is derived from the creator address and the number of transactions sent from that address, the so called "nonce".
+
+        #note - Regardless of whether or not the account stores code , the two types are created equally by the EVM.
+
+        #note - Every account has a persistent key-value store mapping 256-bit words to 256-bit words called storage.
+
+        #note - Every account has a balance in Ether which can be modified by sending transactions that include Ether.
+
+
+
+
+
+
+
+
+
+
