@@ -1,0 +1,30 @@
+/*  --> 
+ 
+    While writing a program, theere may be a situation when you need to adopt one out of a 
+    given set of pahs. In such cases, you nedd to use conditional statements that allow your
+    program to make correct decision and perform right actions.
+    
+    
+    */
+    
+    
+    contract DesicionMaking{
+
+
+  uint  stakingWallet = 10;
+
+  function airDrop() public view returns(uint){
+      if( stakingWallet == 10){
+          return stakingWallet + 10;
+      }else{
+          return stakingWallet + 1;
+      }
+  }
+
+
+}
+    
+    
+    
+
+   
