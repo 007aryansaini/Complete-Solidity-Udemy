@@ -1,0 +1,46 @@
+/*
+
+-->
+
+   . We can modify the rules of scope in solidity with 4 keywords namely - public , private , internal , external.
+   
+
+--> Public 
+    
+       .  public means that you can access the variable or a function outside the smart contract and inside the smart contract.
+   
+        
+--> Private 
+ 
+      .  you can only call the function inside the contract.
+
+--> External 
+ 
+      . you can only call the function outside the contract and not within the contract in which it is declared as external.
+
+--> Internal 
+
+      .  Call within the contract or other contract that inherits this contract.
+      
+      
+      
+      */
+      
+      
+      // SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract scopeFunctionVariable{
+
+      uint public data =  10; // State Variable
+
+      function x() public view returns(uint){
+          return data + 15;
+      }
+
+      function y() public view returns(uint){
+          return data;
+      }
+
+
+}
