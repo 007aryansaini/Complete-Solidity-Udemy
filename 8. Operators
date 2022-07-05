@@ -1,0 +1,38 @@
+/*
+
+In any programming language, operators play a vital role i.e.
+they create a foundation for the programming. Similarly, the functionality of 
+Solidity is also incomplete without the use of operators. Operators allow users to perform 
+different operations on operands. Solidity supports the following types of operators based upon their functionality.
+
+Arithmetic Operators
+Relational Operators
+Logical Operators
+Bitwise Operators
+Assignment operators
+Conditional Operator
+Arithmetic Operators
+
+
+-->    https://www.geeksforgeeks.org/solidity-operators/  
+
+
+
+*/
+
+
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract Modulo{
+ 
+  uint public a = 13;
+  uint public b = 0;
+
+  function c() public view returns(uint){
+       return a % b;
+  }
+
+
+}
