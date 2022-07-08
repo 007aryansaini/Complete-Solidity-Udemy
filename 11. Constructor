@@ -1,0 +1,80 @@
+/*
+  --> Constructor in Solidity :
+
+   . Constructor is a special type of function using constructor keyword.
+   . It initializes the state variables of a contract.
+
+--> Following are the key characterstick of a constructor :
+
+   1. A contract can only have one constructor.
+   2. A constructor code is executed once when a contract is created and it is used to initialize the contract state.
+   3. In case , no constructor is defined, a default constructor is present in the contract.
+   4. After the constructor code gets executed, the final code is deployed to blockchain.
+      This code includes public functions and code reachable through functions.
+      Constructor code or any internal method used only by constructor are not included in the final code.
+   5. A constructor can be either public or internal.
+   6. An internal constructor marks the contract as abstract.
+
+
+
+
+
+*/
+
+
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+
+contract Member{
+    
+     string public name;
+     uint public age;
+
+     constructor(string memory _name , uint _age)  {
+           name = _name;
+           age = _age;
+     }
+
+
+}
+
+contract Teacher is Member //( 'Aryan Saini' , 22 )
+{
+         constructor(string memory _n , uint _age) Member( _n , _age){
+      
+           }
+         
+
+         function getName() public view returns(string memory){
+             return name;
+         }
+}
+
+
+
+
+
+
+
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract base{
+      uint public data;
+
+      constructor(uint _data){
+          data = _data;
+      }
+
+
+}
+
+contract Derived is base(5){
+
+       function getData() public view returns(uint){
+              return data;
+       }
+}
