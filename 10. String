@@ -1,0 +1,110 @@
+/* 
+
+  --> String :  Values that are made up of ordered sequence of characters, such as "Hello World" 
+
+   # Solidity supports string literals using both double quote ( " ) and single quote( ' ).
+   # Solidity provide string as a datatype to store string literals.
+   # Anything that is wrapped in the quotation is string.
+
+
+           eg = "Hello"
+                 'Aryan'
+                  34 -> not a string
+                  "34" --> Now it is a string as it is wrapped in double quote.
+
+--> memory in Solidity :
+
+      . much like RAM , Memory in solidity is a temporary place to store data whereas storage hold the data between the function call.
+      . The Solidity contract can use any amount of memory during the execution but once the execution stops , the memory is completely wiped off for the next execution.
+
+   #NOTE Imp -- > The Gas consumption of Memory is not very significant as compared to the gas consumption of Storage. 
+                  Therefore, it is always better to use Memory for intermediate calculations and store the final result in Storage.
+
+
+Four types of memory Allocations ->
+
+1. Storage : Storage means that you are storing a variable directly on the blockchain. It is persistent. You can still use the value in future.
+
+2. Memory : This is temporary memory. The data is not stored on the bloclchain. It is not persistent. It's the temporary memory or we can say copy of data is created temporary.
+
+3. Stack : Every single variable that you have created inside a function.
+
+4. Calldata : special data location that contains the function arguments, only available for external function call parameters.
+
+
+
+
+
+#Note - 
+
+ // strings are too expensive computationally to get length in solidity so you can't do it like other languages - utf storing (solidity removes the process)
+    
+    function getStringLength() public view  returns(uint) {
+        bytes memory stringToBytes = bytes(greetings);
+        return stringToBytes.length;
+        // greetings.length;
+    }
+
+
+# This can be achieved the string a string into bytes because working in bytes generally saves the computational cost.
+
+
+
+
+#NOTE :
+
+     // € watch for special characters - use if statement
+     // \ skip characters 
+     // "" double characters 
+     // \n for a new line 
+
+
+*/
+
+
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract String{
+
+string greeting = "Hello";
+
+function greet() public view returns(string memory){
+       return greeting;
+}
+
+function changeGreeting(string memory _change) public {
+       greeting = _change;
+}
+
+function getStringLength() public view returns(uint){
+       bytes memory stringToBytes = bytes(greeting);
+       return stringToBytes.length;
+}
+
+
+}
+
+
+
+// Assignment -->
+
+
+contract assignment{
+    string favouriteColor = "blue";
+
+    function favColor() public view returns(string memory){
+          return favouriteColor;
+    }
+
+    function changeColor(string memory _changeInColor)public {
+          favouriteColor = _changeInColor;
+    }
+
+    function getColorLength() public view returns(uint){
+
+        bytes memory stringToBytes = bytes(favouriteColor);
+        return stringToBytes.length;
+    }
+}
