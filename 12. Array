@@ -1,0 +1,98 @@
+/*
+
+
+--> Array :
+    
+      . An array is a data structure which is used to store the similar type of data.
+      . It used contiguous memory.
+
+
+--> We will see :
+    
+     . How to write an array.    dataType[] name;
+     . Three basic operations namely push, pop and length.   
+     . Remove elements from array.
+
+
+-->    . Three ways ->
+        
+          uint[] myArray;
+          uint[] myArray2;
+          uint[200] myFixedSizedArray;
+
+
+
+--> . The push() method allows you to add one or more element in an array and returns the new length of the array.
+    . The pop() method returns the last element of the array and returns that element to the caller.
+
+-->  When we want to delete the element a some particular index we use delete keyword.
+      #Note - By using delete we are not actually removing the value but we are setting the value at that particular index to default value i.e. 0.
+              This will also not change the length of the array.
+              In solidity also the array indexes start from 0 onwards.
+
+
+
+*/
+
+
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract Array{
+    
+       uint[] public myArray;
+       uint[] myArray2;
+       uint[200] myFixedSizedArray;
+
+       function push(uint _element)public {
+              myArray.push(_element);
+       }
+       function pop() public {
+             myArray.pop();
+       }
+
+       function getLengthOfArray() public view returns(uint){
+           return myArray.length;
+       }
+
+
+       function deleteFromParticularIndex(uint _i) public {
+              delete myArray[_i];
+       }
+}
+
+
+
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract ArrayAssignment{
+
+
+    
+    
+    uint[] changeArray;
+
+    function removeElement(uint _i) public {
+         changeArray[_i] = changeArray[changeArray.length - 1];
+         changeArray.pop();
+    }
+
+    function test() public {
+
+
+        for( uint i=1 ;  i <= 4 ; i++){
+            changeArray.push(i);
+        }
+    }
+
+
+     
+}
+
+
+
+
+
