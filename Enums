@@ -1,0 +1,5 @@
+--> Enums in Solidity 
+
+
+    . Enum restrict a variable to have one of only a few predefined values. The values in this enumurated list are called enums.
+    . With the use of enums it is possible to reduce the number of bugs in your code.
