@@ -1,0 +1,49 @@
+/*
+
+--> Mapping :  Mapping in Solidity acts like a hash table or dictionary in any other language. These are used to
+               store the data in the form of key-value pairs, a key can be any of the built-in data types but 
+               reference types are not allowed while the value can be of any type.
+
+
+               . Mapping is a refrence type like array and struct.
+               . Mapping allows you to save data and a key that you specify and then retrieve the data later.
+
+
+    # IMPORTANT_NOTE ->  In solidity you can't iterate through the map, you need to store the keys in an array and you can't  give size.
+
+     
+                     -> In Solidity if we try to retrieve a value corresponding to a key and if we haven't set the value then we will get a default value i.e. 0.
+                 
+
+
+--> Nested Mapping :  . maps within maps
+                      . eg1 ->  What if you wanted to store the movies that belong to a certain person, thing or address.  ** Very Important **.
+                      . eg2 ->  allow one address to spend on behalf of another address ( ERC20 tokens ).
+                      
+                      . Syntax : mapping( key => mapping( key2 => value )) //Nested Mapping.
+
+
+
+*/
+
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract Mapping{
+
+mapping(address => uint)  myMap;
+
+function addValueToAddress(address _addr , uint _value) public {
+       myMap[_addr] = _value;
+}
+
+function getValueToCorrespondingAddress(address _addr) public view returns(uint){
+          return myMap[_addr];
+}
+
+function deleteValueCorrespondingToAddress(address _addr) public {
+        delete myMap[_addr];
+}
+
+}
